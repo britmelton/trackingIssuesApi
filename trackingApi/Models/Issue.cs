@@ -4,12 +4,13 @@ namespace trackingApi.Models
 {
     public class Issue
     {
-        //will represent an issue
+        //will represent a single issue
+
         //describe an issue
-        public int Id { get; set; } 
+        public int Id { get; set; } //will be the primary key 
         [Required] //validation type
         public string Title { get; set; }
-        [Required] //means these properties must have a value
+        [Required] //attribute means these properties must have a value
         public string Description { get; set; } 
         public Priority Priority { get; set; }
         public IssueType IssueType { get; set; }

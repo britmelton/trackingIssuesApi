@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 //
 
 builder.Services.AddDbContext<IssueDbContext>(
-    o => o.UseSqlServer());
+    o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 
 /*use the Services Property exposed by the builder object
 invoke the method AddDbContext
